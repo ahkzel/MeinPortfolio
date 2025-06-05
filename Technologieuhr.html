@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <title>AxelBL Portfolio</title>
+    </head>
+    <body>
+        <header>
+            <div class="entete">
+                <img src="">
+                <h1 class="page-title">Veille Technologique</h1>
+                <h1 class="name-author">Axel Beaulieu-Luangkham</h1>
+            </div>
+        </header>
+        <div id="toggle-nav" class="menu">
+            <i id="menu-icon" class="fas fa-bars"></i>
+            <button id="menu-button" class="menu-button">Menu</button>
+        </div>
+        <nav id="nav" class="nav">
+            <a href="index.html">Accueil</a><hr>
+            <a href="fähigkeiten.html">Compétences</a><hr>
+            <a href="Persönliche Projekte.html">Projets Personnels</a><hr>
+            <a href="Ausbildung.html">Formation</a><hr>
+            <a href="Geschäft.html">Entreprise</a><hr>
+            <a href="Technologieuhr.html">Veille Technologique</a><hr>
+            <a href="wieder aufnehmen.html">CV</a><hr>
+            <a href="Kontakte.html">Contacts</a>
+        </nav>
+        <div class="main">
+            <div class="main-box">
+                <h2 class="topic-title">La POO</h2>
+                <div class="main-content">
+                    <div class="mainbox-subcontent-title"><i class="fa fa-chevron-down"></i><h3>Qu'est ce que la POO ?</h3></div>
+                    <p class="mainbox-subcontent">
+                        La POO, Programmation Orientée Objet (OOP en anglais) est un paradigme de programmation.
+                        Les paradigmes sont des façons différentes de programmer ce que l'on code, des
+                        façons différentes de créer des solutions pour répondre à des problèmes. On peut
+                        atteindre un résultat identique avec 2 paradigmes différents, mais de 2 manières
+                        différentes. L'un sera peut-être plus rapide, l'autre peut-être plus lisible ou
+                        durable.<br><br>
+                        Il existe 3 grands types de paradigmes :<br>
+                        - Le paradigme Impératif, le plus courant, il ne déclare pas de variables, ne
+                        fait pas appel à des procédés complexes de réutilisation du code, il exécute
+                        simplement une séquence d'instructions. Le langage machine qui forme
+                        l'architecture du processeur est programmé en Impératif et la majorité des
+                        processeurs des ordinateurs sont également programmés en Impératif.<br><br>
+                        - Le paradigme Déclaratif, qui contient notamment la programmation fonctionnel,
+                        décrit ce que le programme doit effectuer plutôt que comment il doit l'effectuer 
+                        (comme la programmation impérative). La programmation déclarative passe du point
+                        de départ au point d'arrivée sans préciser les opérations faites entre les deux.
+                        Seul le résultat est visible.<br><br>
+                        - Le troisième paradigme est la programmation orientée objet. L'on définit des
+                        briques logicielles que l'on appelle "objets", qui peuvent représenter un concept,
+                        un objet ou intéraction, et qui intéragissent les unes avec les autres comme dans
+                        le monde réelle via une structure strictement définie, et via ces intéractions, 
+                        ces objets sont capables de réaliser les fonctionnalités nécessaire à la
+                        résolution des problèmes.
+                    </p>
+                    <div class="mainbox-subcontent-title"><i class="fa fa-chevron-down"></i><h3>Sources</h3></div>
+                    <div class="mainbox-subcontent">
+                        <i class="bis bi-plus"></i> <a href="https://thenextweb.com/news/object-oriented-programming-is-dead-syndication" target="_blank">
+                        La POO est-elle dépassée ?</a> de Ari Joury, auteur à <a href="https://thenextweb.com" target="_blank">
+                        TheNextWeb</a>, un site qui rassemble des informations sur les évolutions récentes de la tech dans le monde.<br>
+                        <div class="toggle_sources">
+                            <i class="fas fa-chevron-right toggle-button" id="toggle1" data-target="para1"></i>
+                            <p class="sources-detail" id="para1">
+                                L'article résume ce qu'est la programmation orientée objet, et pourquoi elle a été
+                                créée, mais pointe un problème récurent dans la POO aujourd'hui, celui-ci étant 
+                                que la POO était peut être devenue trop populaire. D'après Ari Joury, il n'est 
+                                pas rare que des développeurs créent leurs classes héritées de façons brouillonnes 
+                                et les fasses toutes communiquer entre elle, entrainant ainsi un code difficilement 
+                                réutilisable dans différents contextes via une mauvaise encapsulation et une 
+                                utilisation intensive de la POO dans des situations où ce n'est pas la solution 
+                                optimale.<br>La conclusion de cet article est qu'il est très important
+                                lorsque l'on programme en POO de créer une structure de travail claire et
+                                bien encapsulée afin d'avoir un code flexible qui ne demande pas une 
+                                maintenance lourde au moindre problème.
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="mainbox-subcontent">
+                        <i class="bis bi-plus"></i> <a href="https://book.pragmatic-objects.com" target="_blank">
+                        Pragmatic Objects</a> un article documentaire écrit sur gitbook.<br>
+                        <div class="toggle_sources">
+                            <i class="fas fa-chevron-right toggle-button" id="toggle2" data-target="para2"></i>
+                            <p class="sources-detail" id="para2">
+                                Cet article m'a été confié par mon tuteur d'alternance au tout début de mon alternance.
+                                On savait qu'on allait faire beaucoup de POO, alors en lui montrant mes premiers projets
+                                de code impliquant de la "POO" en python, il m'a fait différentes remarques concernant
+                                la façon dont mes instances et mes classes communiquaient entre elles, et m'a
+                                communiqué ce site afin que je comprenne mieux l'enjeu derrière la POO.<br>
+                                Ce site, comme à peu près tous ceux sur la POO, décrit ce qu'est la POO. Mais pas
+                                uniquement comme on l'apprend quand on découvre la POO pour la première fois. Ce n'est
+                                pas simplement question de classes, d'attributs, d'héritage, d'accès aux données, d'instances,
+                                etc. Selon ce site, un langage POO ne signifie pas un code POO. Ce n'est pas parce qu'on
+                                code en python avec des classes que notre code est POO, ce n'est pas parce qu'on code
+                                dans un langage procédural comme le C que notre code n'est pas en POO.<br>
+                                Selon l'auteur, si l'on veut structurer notre code en POO, il ne faut pas penser de façon
+                                technique comme on l'apprend usuellement de façon très pratique à l'école (classes, héritage, etc),
+                                mais il faut plutôt penser au design.<br>
+                                La philosophie principale d'Anthony (l'auteur) consiste à dire que les objets sont des "choses"
+                                pensantes et que le regard que l'on a sur nos intéractions influent souvent trop la façon que l'on
+                                a de définir ces choses. Selon lui, tout peut être un objet, une personne, un vêtement, un nombre,
+                                une date, mais aussi une opération, un ajout, une comparaison, un type de donnée, tout peut être une
+                                classe. Pourtant, dans notre esprit, on aurait du mal à créer une classe à partir de "supérieur à".<br>
+                                D'après Anthony, le principal aspect d'une classe est son encapsulation. Puisque ce sont des objets
+                                pensant, il faut garder en tête que ça n'aurait pas de sens de créer une instance d'une classe pour
+                                que toutes ses informations soient publiques. Le fait que le client puisse accéder à toutes les données
+                                et opérations d'un objet n'a pas de sens, et en ce sens là, les "getter" et "setter" sont anti POO.
+                                Parce qu'au final on définit des attributs privés pour les rendre publique. Lorsqu'on créé une classe,
+                                l'aspect technique nous fait souvent oublier la nature de la programmation objet. Et la façon la plus
+                                simple de le vérifier, combien de codes en "POO" respectent si peu la nature de la "POO" qu'ils pourraient
+                                tout autant être codés en procédural sans que cela ne change rien à l'architecture du code ?
+                                Les objets sont dont avant tout des entités, avec lesquelles on intéragit, mais comme on le ferait
+                                avec un humain, on ne vient pas chez quelqu'un pour lui changer son canapé et récupérer son adresse IP,
+                                pareillement les objets sont confidentiels, et lorsque l'utilisateur intéragit avec un objet, il doit
+                                savoir ce qu'il fait, mais il ne doit pas pouvoir changer librement tout et n'importe quoi dans l'objet.<br>
+                                Cet article m'a permis d'évoluer dans mon travail aux côtés de mes collègues qui me donnaient aussi des
+                                conseils au fur et à mesure pour créer des codes plus respectueux de la logique de la POO, avec toujours
+                                en tête cette question "est ce que la POO est réellement nécessaire dans le code que je viens d'écrire ?"
+                                si la réponse est non, c'est souvent que le code est mal écrit.
+                            </p>
+                        </div>
+                    </div>
+                    <p class="mainbox-subcontent">
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2025 Axel Beaulieu-Luangkham. Tous droits réservés.</p>
+        </footer>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

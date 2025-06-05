@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <title>AxelBL Portfolio</title>
+    </head>
+    <body>
+        <header>
+            <div class="entete">
+                <img src="">
+                <h1 class="page-title">Projets Personnels</h1>
+                <h1 class="name-author">Axel Beaulieu-Luangkham</h1>
+            </div>
+        </header>
+        <div id="toggle-nav" class="menu">
+            <i id="menu-icon" class="fas fa-bars"></i>
+            <button id="menu-button" class="menu-button">Menu</button>
+        </div>
+        <nav id="nav" class="nav">
+            <a href="index.html">Accueil</a><hr>
+            <a href="fähigkeiten.html">Compétences</a><hr>
+            <a href="Persönliche Projekte.html">Projets Personnels</a><hr>
+            <a href="Ausbildung.html">Formation</a><hr>
+            <a href="Geschäft.html">Entreprise</a><hr>
+            <a href="Technologieuhr.html">Veille Technologique</a><hr>
+            <a href="wieder aufnehmen.html">CV</a><hr>
+            <a href="Kontakte.html">Contacts</a>
+        </nav>
+
+        <div class="main">
+            <div class="projet-main-box">
+                <h2 class="topic-title">Mes Projets</h2>
+                <div class="projet-main-content">
+                    <div class="projet-box">
+                        <h3 class="projet-title">Site web sur warhammer40k</h3>
+                        <a href="https://github.com/ahkzel/Wiki40k" target="_blank">Lien vers le code github</a>
+                        <p>
+                            <i class="fas fa-circle"></i> Site encyclopédique léger sur l'univers de warhammer 40k. Ce site présente
+                            des factions, personnages et planètes connues de cet univers et propose une boutique
+                            fictive. On peut s'y créer un compte utilisateur et des comptes joueur, procéder à des
+                            achats dans la boutique et consulter les statistiques de cette dernière (bien évidemment
+                            les achats ne sont pas réels).<br><br>
+                            <i class="fas fa-circle"></i> Le site est construit selon une architecture MVC avec une base de données mysql.
+                            Il est codé presque intégralement en php. Les liens de la vue redirigent vers le
+                            fichier index.php qui initialise tous les controleurs, et en fonction de l'url
+                            contenu dans le lien transmis par la vue, il va rediriger vers les contrôleurs associés.
+                            index.php initialise également la session et stocke les variables $_GET et $_POST pour
+                            les transmettre aux controleurs.<br><br>
+                            <i class="fas fa-circle"></i> Le site est structuré avec un controleur par modèle et non un contrôleur par vue, ce qui
+                            signifie que certaines vues font appel à plusieurs contrôleurs. Les contrôleurs quand à eux
+                            s'occupent de chercher des données dans la base de données via les modèles en fonction des $variables
+                            qui leur sont données, les procéder, et les renvoyer à la vue qui les affiche sans aucun calcul
+                            ou algorithme.<br><br>
+                            <i class="fas fa-circle"></i> La base de données est composé d'une table factions, personnages, planètes, utilisateur, minifigs, joueur, et achat.
+                            Chacune d'entre elles est gérée par un modèle qui est lui même géré par un controleur. Toutes les classes du site
+                            ne sont instanciées qu'une seule fois, la connexion PDO est également fait à partir d'un modèle dédié et son
+                            controleur stocke cette variable et la renvoie à l'ensemble des controleurs. Les appels entre controleurs sont minimisés,
+                            il sont même inexistants, lorsque plusieurs controleurs doivent être mis en commun, le transit est géré par le
+                            contrôleur principal qui stocke les variables retournées par les controleurs pour les mettre en commun et les
+                            renvoyer à la bonne vue.<br><br>
+                            <i class="fas fa-circle"></i> Il n'y a qu'un seul fichier css et javascript pour tout le site, celui-ci est d'ailleurs très peu consommateur
+                            en javascript et le css est très généralisé et optimisé, toutes les pages ont plus ou moins le même style
+                            graphique et j'ai essayé de maximiser la réutilisation de classes déjà crées en faisant mon architecture front-end.
+                        </p>
+                    </div>
+                    <div class="projet-box">
+                        <h3 class="projet-title">Bot discord</h3>
+                        <a href="https://github.com/ahkzel/DiscordBot" target="_blank">Lien vers le code github</a>
+                        <p>
+                            <i class="fas fa-circle"></i> Un de mes premiers projets, réalisé en terminale codé intégralement en python.
+                            Ce bot discord est, comme son nom l'indique, un bot discord, qui peut être ajouté à n'importe quel
+                            serveur discord et modifié à tout moment si on a son TOKEN unique.<br><br>
+                            <i class="fas fa-circle"></i> Pour le coder, j'ai fais appel à l'api de discord et ses extensions, ainsi qu'asyncio et diverses
+                            API pour la musique telles que youtube_dl, youtube_dl2, spotify, etc. Malheureusement toutes les bibliothèques
+                            faciles d'utilisation en python sont obsolètes aujourd'hui principalement pour des raisons de droits d'auteur
+                            donc la partie musicale du bot ne fonctionne pas.<br><br>
+                            <i class="fas fa-circle"></i> Le bot a des fonctionnalités de modération automatique et manuelle, de chat avec les membres du serveur, de
+                            musique (en théorie), de roleplay (on peut se créer un personnage avec des attributs), et d'économie évolutive
+                            au cours des utilisations.<br><br>
+                            <i class="fas fa-circle"></i> Il utilise une base de données composée de trois tables qui récupèrent les id des utilisateurs de discord et des
+                            serveurs afin de fonctionner en ligne sur plusieurs serveurs différents. Son code est organisé en POO pour accéder
+                            à ces bases de données et exécuter toutes les opérations qui ne sont pas relatives à discord. Pour ce qui est
+                            des commandes discord, celles-ci sont toutes implémentées dans le main, de même que sa connexion.
+                        </p>
+                    </div>
+                    <div class="projet-box">
+                        <h3 class="projet-title">Jeu RP texte</h3>
+                        <a href="https://github.com/ahkzel/jeuRPText" target="_blank">Lien vers le code github</a>
+                        <p>
+                            <i class="fas fa-circle"></i> Ce jeu est mon premier projet en programmation. Il est codé intégralement en python sans utiliser d'API.
+                            Il ne possède pas d'interface utilisateur et n'est pas dynamique. C'est un script écrit qui est exécuté
+                            et des choix sont proposés à l'utilisateur tels les "livres dont vous êtes le héro", on pourra des fois
+                            faire des choix mais tout est codé à l'avance.<br><br>
+                            <i class="fas fa-circle"></i> Le projet est très rudimentaire, il est POO tout de même avec une classe pour les joueurs, une pour les pnj,
+                            une pour les armes, une pour les armures, une pour les items, une pour les classes de personnage et une classe
+                            par classe spécifique qui hérite de la superclasse Classe.<br><br>
+                            <i class="fas fa-circle"></i> Les objets des classes communiquent entre eux via des méthodes sans jamais appeler de getter et de setter afin de
+                            relier un personnage à son équipement par exemple, ou à sa position dans le monde.
+                        </p>
+                    </div>
+                    <div class="projet-box">
+                        <h3 class="projet-title">Site web sur le cinéma</h3>
+                        <a href="https://github.com/ahkzel/PersonnalCinemaWebsite" target="_blank">Lien vers le code github</a><br>
+                        <a href="https://ahkzel.github.io/PersonnalCinemaWebsite/index.html" target="_blank">Lien vers le site</a>
+                        <p>
+                            <i class="fas fa-circle"></i> Site web en html css avec un bout de javascript sur le cinéma globalement. Le site possède une page d'accueil qui fait une brève
+                            description du site, accompagnée d'un formulaire de newsletter, ainsi que d'une barre de navigation pour naviguer entre les pages.
+                            Il possède une page renseignant différents sites de critiques que l'on peut visiter directement via des liens, et un input dans
+                            lequel on peut rentrer le nom d'un film série, etc, qui va lier le résultat de cette barre de recherche aux liens des sites externes
+                            pour permettre d'aller directement rechercher sur tous les sites la série que l'on veut. Une page films du moment et une page série
+                            du moment sont également disponibles, qui possèdent une description des 5 séries et films les plus populaires du moment avec un lien
+                            redirigeant vers la page imdb de ce film/série. Le site a également un bouton de changement de thème pour passer du thème clair au sombre
+                            et inversement.<br><br>
+                            <i class="fas fa-circle"></i> Dans le code il y a un fichier html par page et un fichier css en tout qui gère toutes les pages du site, le site est dynamique en partie
+                            mais il ne stocke rien, il n'y a donc pas de base de donnée, pas de principe d'utilisateur, lorsqu'on arrive dessus on peut l'utiliser.
+                            Le changement de thème et la barre de recherche sont gérées par le script en javascript.<br><br>
+                            <i class="fas fa-circle"></i> Etant mon premier site web, les fonctionnalités sont limitées et le css est rudimentaire mais le tout est fonctionnel.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="main-box">
+                <h2 class="topic-title">Projets d'entreprise</h2>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Axel Beaulieu-Luangkham. Tous droits réservés.</p>
+        </footer>
+
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
