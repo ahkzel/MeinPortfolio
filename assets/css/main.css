@@ -358,3 +358,9 @@ nav hr{
 .toggle_sources .fa-chevron-down {
     cursor: pointer;
 }
+
+.cv-images{
+    display: flex;
+    position: relative;
+    width: 100%;
+}
