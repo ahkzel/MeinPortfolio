@@ -244,6 +244,8 @@ nav hr{
 }
 .mainbox-subcontent img {
     align-self: center;
+    display: flex;
+    position: relative;
     width: 100%;
 }
 
