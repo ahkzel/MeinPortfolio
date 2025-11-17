@@ -359,7 +359,7 @@ nav hr{
     cursor: pointer;
 }
 
-.cv-images{
+.cv-image{
     display: flex;
     position: relative;
     width: 100%;
