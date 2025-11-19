@@ -277,7 +277,8 @@ nav hr{
     padding: 13px;
     border-radius: 15px;
     box-shadow: 4px 4px 0 rgb(0, 0, 0, 0.8);
-    width: calc(33% - 42px);
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
 }
 
 .projet-box a {
@@ -359,10 +360,4 @@ nav hr{
 
 .toggle_sources .fa-chevron-down {
     cursor: pointer;
-}
-
-.cv-image{
-    display: flex;
-    position: relative;
-    width: 100%;
 }
