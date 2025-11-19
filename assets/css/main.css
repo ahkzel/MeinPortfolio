@@ -242,11 +242,28 @@ nav hr{
 .mainbox-subcontent a:hover {
     text-decoration: underline;
 }
+
 .mainbox-subcontent img {
     align-self: center;
     display: flex;
     position: relative;
     width: 100%;
+}
+
+.main-content .mainbox-subcontent-center {
+    margin-left: 20px;
+    background-color: #d3d3d3;
+    padding: 13px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0 rgb(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.organigramme-image {
+    margin: 15px;
+    display: block;
 }
 
 .projet-main-box {
