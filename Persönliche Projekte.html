@@ -39,16 +39,15 @@
                         <h3 class="projet-title">Site web sur warhammer40k</h3>
                         <a href="https://github.com/ahkzel/Wiki40k" target="_blank">Lien vers le code github</a>
                         <p>
-                            <i class="fas fa-circle"></i> Site encyclopédique léger sur l'univers de warhammer 40k. Ce site présente
+                            <i class="fas fa-circle"></i> Site encyclopédique sur l'univers de warhammer 40k. Ce site présente
                             des factions, personnages et planètes connues de cet univers et propose une boutique fictive. On peut s'y 
                             créer un profil de joueur, procéder à des achats dans la boutique et consulter les statistiques 
                             de cette dernière.<br><br>
                             <i class="fas fa-circle"></i> Le site est construit selon une architecture MVC avec une base de données mysql.
-                            Il est codé presque intégralement en php. Le fichier index.php va récupérer les méthodes $_GET, $_POST et les liens
-                            de la vue pour les envoyer en traitement aux contrôleurs. Le site est structuré avec un controleur par modèle et non 
-                            un contrôleur par vue, ce qui signifie que certaines vues font appel à plusieurs contrôleurs. Il y a un modèle par 
-                            table dans la base de donnée. Ces modèles récupèrent les données nécessaires aux contrôleurs qui les récupérent et 
-                            les renvoient à la vue.<br><br>
+                            Le fichier index.php va récupérer les méthodes $_GET, $_POST et les liens de la vue pour les envoyer en traitement 
+                            aux contrôleurs. Le site est structuré avec un controleur par modèle ce qui signifie que certaines vues font appel 
+                            à plusieurs contrôleurs. Il y a un modèle par table dans la base de donnée. Ces modèles récupèrent les données 
+                            nécessaires aux contrôleurs qui les récupérent et les renvoient à la vue.<br><br>
                             <i class="fas fa-circle"></i> La base de données est composé d'une table factions, personnages, planètes, utilisateur, minifigs, joueur, et achat.
                             Toutes les classes du site ne sont instanciées qu'une seule fois puis utilisées pendant l'utilisation du site et il 
                             n'y a pas de communication entre les contrôleurs.<br><br>
