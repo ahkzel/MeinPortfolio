@@ -40,31 +40,19 @@
                         <a href="https://github.com/ahkzel/Wiki40k" target="_blank">Lien vers le code github</a>
                         <p>
                             <i class="fas fa-circle"></i> Site encyclopédique léger sur l'univers de warhammer 40k. Ce site présente
-                            des factions, personnages et planètes connues de cet univers et propose une boutique
-                            fictive. On peut s'y créer un compte utilisateur et des comptes joueur, procéder à des
-                            achats dans la boutique et consulter les statistiques de cette dernière (bien évidemment
-                            les achats ne sont pas réels).<br><br>
+                            des factions, personnages et planètes connues de cet univers et propose une boutique fictive. On peut s'y 
+                            créer un profil de joueur, procéder à des achats dans la boutique et consulter les statistiques 
+                            de cette dernière.<br><br>
                             <i class="fas fa-circle"></i> Le site est construit selon une architecture MVC avec une base de données mysql.
-                            Il est codé presque intégralement en php. Les liens de la vue redirigent vers le
-                            fichier index.php qui initialise tous les controleurs, et en fonction de l'url
-                            contenu dans le lien transmis par la vue, il va rediriger vers les contrôleurs associés.
-                            index.php initialise également la session et stocke les variables $_GET et $_POST pour
-                            les transmettre aux controleurs.<br><br>
-                            <i class="fas fa-circle"></i> Le site est structuré avec un controleur par modèle et non un contrôleur par vue, ce qui
-                            signifie que certaines vues font appel à plusieurs contrôleurs. Les contrôleurs quand à eux
-                            s'occupent de chercher des données dans la base de données via les modèles en fonction des $variables
-                            qui leur sont données, les procéder, et les renvoyer à la vue qui les affiche sans aucun calcul
-                            ou algorithme.<br><br>
+                            Il est codé presque intégralement en php. Le fichier index.php va récupérer les méthodes $_GET, $_POST et les liens
+                            de la vue pour les envoyer en traitement aux contrôleurs. Le site est structuré avec un controleur par modèle et non 
+                            un contrôleur par vue, ce qui signifie que certaines vues font appel à plusieurs contrôleurs. Il y a un modèle par 
+                            table dans la base de donnée. Ces modèles récupèrent les données nécessaires aux contrôleurs qui les récupérent et 
+                            les renvoient à la vue.<br><br>
                             <i class="fas fa-circle"></i> La base de données est composé d'une table factions, personnages, planètes, utilisateur, minifigs, joueur, et achat.
-                            Chacune d'entre elles est gérée par un modèle qui est lui même géré par un controleur. Toutes les classes du site
-                            ne sont instanciées qu'une seule fois, la connexion PDO est également fait à partir d'un modèle dédié et son
-                            controleur stocke cette variable et la renvoie à l'ensemble des controleurs. Les appels entre controleurs sont minimisés,
-                            il sont même inexistants, lorsque plusieurs controleurs doivent être mis en commun, le transit est géré par le
-                            contrôleur principal qui stocke les variables retournées par les controleurs pour les mettre en commun et les
-                            renvoyer à la bonne vue.<br><br>
-                            <i class="fas fa-circle"></i> Il n'y a qu'un seul fichier css et javascript pour tout le site, celui-ci est d'ailleurs très peu consommateur
-                            en javascript et le css est très généralisé et optimisé, toutes les pages ont plus ou moins le même style
-                            graphique et j'ai essayé de maximiser la réutilisation de classes déjà crées en faisant mon architecture front-end.
+                            Toutes les classes du site ne sont instanciées qu'une seule fois puis utilisées pendant l'utilisation du site et il 
+                            n'y a pas de communication entre les contrôleurs.<br><br>
+                            <i class="fas fa-circle"></i> Le site ne possède qu'un fichier css et un fichier js, tous deux plutôt optimisés.
                         </p>
                     </div>
                     <div class="projet-box">
