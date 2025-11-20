@@ -265,7 +265,7 @@ nav hr{
     margin: 15px;
     display: block;
     position: relative;
-    max-width: 100px;
+    max-width: 100%;
 }
 
 .projet-main-box {
