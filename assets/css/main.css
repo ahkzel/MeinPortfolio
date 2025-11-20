@@ -264,6 +264,8 @@ nav hr{
 .organigramme-image {
     margin: 15px;
     display: block;
+    position: relative;
+    max-width: 100px;
 }
 
 .projet-main-box {
