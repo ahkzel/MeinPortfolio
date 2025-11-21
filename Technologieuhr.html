@@ -128,78 +128,75 @@
                             </p>
                         </div>
                     </div>
-                    <p class="mainbox-subcontent">
-
-                    </p>
-                </div>
-                <br>
-                <div class="mainbox-subcontent">
-                    <i class="bis bi-plus"></i> <a href="https://chgi.developpez.com/c/objet/" target="_blank">
-                    POO en C ?</a> un article tutoriel documentaire écrit sur <a href="https://www.developpez.com/" target="_blank">
-                    Developpez</a>
-                    <div class="toggle_sources">
-                        <i class="fas fa-chevron-right toggle-button" id="toggle3" data-target="para3"></i>
-                        <p class="sources-detail" id="para3">
-                            Cet article est un article qui tente de recréer une POO, mais dans un langage qui ne comporte pas de principe POO
-                            tel le C (pas de classe, d'héritage, etc). Le But est de démontrer qu'il est possible de construire un code avec
-                            une logique POO tout cela sans classes. <br>
-                            L'auteur utilise les srtuctures en C en guise de classe et des fonctions à la place des méthodes. Les données membre
-                            des structures sont inaccessibles autrement que par les fonctions, et c'est une fonction qui va instancier une structure
-                            avec ses données membres (pareillement à un constructeur). Contrairement aux langages en POO, le pointeur this est ici
-                            passé comme premier paramètre de chaque fonction, voici un bout de code :
-                            <code>
-                                // Structure
-                                typedef struct TPile
-                                    {
-                                            int(*Push)(struct TPile*, int);
-                                            int(*Pop)(struct TPile*);
-                                            void(*Clear)(struct TPile*);
-                                            void(*Free)(struct TPile*);
-                                            int(*Length)(struct TPile*);
-                                            void(*View)(struct TPile*);
-                             
-                                            int Nombre;
-                                            struct Titem *Top;
-                                    } TPile ;
-                                // Constructeur
-                                TPile* New_TPile()
-                                    {
-                                           TPile *This = malloc(sizeof(TPile));
-                                           if(!This) return NULL;
-                                           TPile_Init(This);
-                                           This->Free = TPile_New_Free;
-                                           return This;
-                                    }
-                                static void TPile_Init(TPile *This)
-                                    {
-                                           This->Push = TPile_Push;
-                                           This->Pop = TPile_Pop;
-                                           This->Clear = TPile_Clear;
-                                           This->Length = TPile_Length;
-                                           This->View = TPile_View;
-                                           This->Nombre = 0;
-                                           This->Top = NULL;       
-                                    }
-                                // Fonction
-                                int TPile_Push(TPile *This, int Val)
-                                    {
-                                            Titem *new_item = malloc(sizeof(Titem));
-                                            if(!new_item) return ITEM_ALLOC_ERROR;
-                                            new_item->Value = Val;
-                                            new_item->prec = This->Top;
-                                            This->Top = new_item;
-                                            This->Nombre++;
-                                            return 0;
-                                    }
-                                // Destructeur
-                                void TPile_New_Free(TPile *This)
-                                    {
-                                            if(This) TPile_Clear(This);
-                                            free(This);        
-                                            puts("Destruction de la pile dynamique.\n");
-                                    }
-                            </code>
-                        </p>
+                    <br>
+                    <div class="mainbox-subcontent">
+                        <i class="bis bi-plus"></i> <a href="https://chgi.developpez.com/c/objet/" target="_blank">
+                        POO en C ?</a> un article tutoriel documentaire écrit sur <a href="https://www.developpez.com/" target="_blank">
+                        Developpez</a>
+                        <div class="toggle_sources">
+                            <i class="fas fa-chevron-right toggle-button" id="toggle3" data-target="para3"></i>
+                            <p class="sources-detail" id="para3">
+                                Cet article est un article qui tente de recréer une POO, mais dans un langage qui ne comporte pas de principe POO
+                                tel le C (pas de classe, d'héritage, etc). Le But est de démontrer qu'il est possible de construire un code avec
+                                une logique POO tout cela sans classes. <br>
+                                L'auteur utilise les srtuctures en C en guise de classe et des fonctions à la place des méthodes. Les données membre
+                                des structures sont inaccessibles autrement que par les fonctions, et c'est une fonction qui va instancier une structure
+                                avec ses données membres (pareillement à un constructeur). Contrairement aux langages en POO, le pointeur this est ici
+                                passé comme premier paramètre de chaque fonction, voici un bout de code :
+                                <code>
+                                    // Structure
+                                    typedef struct TPile
+                                        {
+                                                int(*Push)(struct TPile*, int);
+                                                int(*Pop)(struct TPile*);
+                                                void(*Clear)(struct TPile*);
+                                                void(*Free)(struct TPile*);
+                                                int(*Length)(struct TPile*);
+                                                void(*View)(struct TPile*);
+                                 
+                                                int Nombre;
+                                                struct Titem *Top;
+                                        } TPile ;
+                                    // Constructeur
+                                    TPile* New_TPile()
+                                        {
+                                               TPile *This = malloc(sizeof(TPile));
+                                               if(!This) return NULL;
+                                               TPile_Init(This);
+                                               This->Free = TPile_New_Free;
+                                               return This;
+                                        }
+                                    static void TPile_Init(TPile *This)
+                                        {
+                                               This->Push = TPile_Push;
+                                               This->Pop = TPile_Pop;
+                                               This->Clear = TPile_Clear;
+                                               This->Length = TPile_Length;
+                                               This->View = TPile_View;
+                                               This->Nombre = 0;
+                                               This->Top = NULL;       
+                                        }
+                                    // Fonction
+                                    int TPile_Push(TPile *This, int Val)
+                                        {
+                                                Titem *new_item = malloc(sizeof(Titem));
+                                                if(!new_item) return ITEM_ALLOC_ERROR;
+                                                new_item->Value = Val;
+                                                new_item->prec = This->Top;
+                                                This->Top = new_item;
+                                                This->Nombre++;
+                                                return 0;
+                                        }
+                                    // Destructeur
+                                    void TPile_New_Free(TPile *This)
+                                        {
+                                                if(This) TPile_Clear(This);
+                                                free(This);        
+                                                puts("Destruction de la pile dynamique.\n");
+                                        }
+                                </code>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
