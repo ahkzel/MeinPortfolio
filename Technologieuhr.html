@@ -144,56 +144,56 @@
                                 avec ses données membres (pareillement à un constructeur). Contrairement aux langages en POO, le pointeur this est ici
                                 passé comme premier paramètre de chaque fonction, voici un bout de code :
                                 <pre><code class="code">
-                                    // Structure
-                                    typedef struct TPile
-                                        {
-                                                int(*Push)(struct TPile*, int);
-                                                int(*Pop)(struct TPile*);
-                                                void(*Clear)(struct TPile*);
-                                                void(*Free)(struct TPile*);
-                                                int(*Length)(struct TPile*);
-                                                void(*View)(struct TPile*);
-                                 
-                                                int Nombre;
-                                                struct Titem *Top;
-                                        } TPile ;
-                                    // Constructeur
-                                    TPile* New_TPile()
-                                        {
-                                               TPile *This = malloc(sizeof(TPile));
-                                               if(!This) return NULL;
-                                               TPile_Init(This);
-                                               This->Free = TPile_New_Free;
-                                               return This;
-                                        }
-                                    static void TPile_Init(TPile *This)
-                                        {
-                                               This->Push = TPile_Push;
-                                               This->Pop = TPile_Pop;
-                                               This->Clear = TPile_Clear;
-                                               This->Length = TPile_Length;
-                                               This->View = TPile_View;
-                                               This->Nombre = 0;
-                                               This->Top = NULL;       
-                                        }
-                                    // Fonction
-                                    int TPile_Push(TPile *This, int Val)
-                                        {
-                                                Titem *new_item = malloc(sizeof(Titem));
-                                                if(!new_item) return ITEM_ALLOC_ERROR;
-                                                new_item->Value = Val;
-                                                new_item->prec = This->Top;
-                                                This->Top = new_item;
-                                                This->Nombre++;
-                                                return 0;
-                                        }
-                                    // Destructeur
-                                    void TPile_New_Free(TPile *This)
-                                        {
-                                                if(This) TPile_Clear(This);
-                                                free(This);        
-                                                puts("Destruction de la pile dynamique.\n");
-                                        }
+// Structure
+typedef struct TPile
+    {
+            int(*Push)(struct TPile*, int);
+            int(*Pop)(struct TPile*);
+            void(*Clear)(struct TPile*);
+            void(*Free)(struct TPile*);
+            int(*Length)(struct TPile*);
+            void(*View)(struct TPile*);
+
+            int Nombre;
+            struct Titem *Top;
+    } TPile ;
+// Constructeur
+TPile* New_TPile()
+    {
+           TPile *This = malloc(sizeof(TPile));
+           if(!This) return NULL;
+           TPile_Init(This);
+           This->Free = TPile_New_Free;
+           return This;
+    }
+static void TPile_Init(TPile *This)
+    {
+           This->Push = TPile_Push;
+           This->Pop = TPile_Pop;
+           This->Clear = TPile_Clear;
+           This->Length = TPile_Length;
+           This->View = TPile_View;
+           This->Nombre = 0;
+           This->Top = NULL;       
+    }
+// Fonction
+int TPile_Push(TPile *This, int Val)
+    {
+            Titem *new_item = malloc(sizeof(Titem));
+            if(!new_item) return ITEM_ALLOC_ERROR;
+            new_item->Value = Val;
+            new_item->prec = This->Top;
+            This->Top = new_item;
+            This->Nombre++;
+            return 0;
+    }
+// Destructeur
+void TPile_New_Free(TPile *This)
+    {
+            if(This) TPile_Clear(This);
+            free(This);        
+            puts("Destruction de la pile dynamique.\n");
+    }
                                 </code></pre>
                             </p>
                         </div>
