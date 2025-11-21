@@ -156,6 +156,96 @@
 
             <div class="projet-main-box">
                 <h2 class="topic-title">Projets d'entreprise</h2>
+                <div class="projet-main-content">
+                    <div class="projet-box">
+                        <h3 class="projet-title">Support utilisateur</h3>
+                        <p>
+                            <i class="fas fa-circle"></i> En tant que TDs, notre but premier est de s'assurer que les artistes puissent travailler dans des conditions optimales
+                            et avoir accès à tout l'environnement de production. Chaque production requiert certains logiciels avec chacun sa version définie et certains packages 
+                            avec chacun sa version définie. Cela pose souvent des conflits entre packages et logiciels car la version requise d'un logiciel peut ne pas être
+                            compatible avec la version requise d'un package, ou une prod peut évoluer et soudainement avoir besoin d'une mise à jour sur un de ses packages 
+                            ou logiciels.<br><br>
+                            <i class="fas fa-circle"></i> C'est le ticket de support que j'ai résolu ci-dessous. Nous avions besoin d'avoir la version 2025 de meshroom (un 
+                            logiciel "maison") sur une prod mais cela a créé un conflit entre 2 packages déjà définis qui ne demandaient pas la même version de meshroom. Il 
+                            a donc fallu les mettre à jour, puis une fois que le ticket était résolu j'ai envoyé un message à l'artiste concerné pour lui faire savoir que le 
+                            problème était reglé. 
+                        </p>
+                        <img class="projet-image" src="assets/img/exemple_support.png">
+                    </div>
+                    <div class="projet-box">
+                        <h3 class="projet-title">Exporteur de caméra</h3>
+                        <p>
+                            <i class="fas fa-circle"></i> L'exporteur de caméra est un projet que j'ai terminé en septembre 2025. Le but était de créer un exporteur de caméra 
+                            pour prendre une caméra d'une scène houdini et l'exporter dans un autre logiciel ainsi qu'un baker d'animation pour créer une caméra de rendu sur une 
+                            animation das houdini.<br><br>
+                            <i class="fas fa-circle"></i> Le package est codé en python. Il possède un launcher qui appelle l'ui du baker ou de l'exporteur selon lequel on appelle 
+                            via le menu de houdini, l'ui est écrite avec un wrapper de Qt maison et renvoie les informations entrées par l'utilisateur directement au core du code 
+                            qui traite les données et exporte donc la caméra ou bake l'animation. J'ai réalisé ce projet en collaboration avec 2 de mes collègues notamment car les 
+                            tests demandaient de créer artificiellement des prods ce qui a demandé de rajouter du code dans d'autres packages.
+                        </p>
+                        <img class="projet-image" src="assets/img/screenshot_exportcamera.png">
+                    </div>
+                    <div class="projet-box">
+                        <h3 class="projet-title">Sanity Check</h3>
+                        <p>
+                            <i class="fas fa-circle"></i> Le sanity check est une application que j'ai mis en place dans nuke pour permettre aux artistes de faire une check liste 
+                            de leur scène en vérifiant automatiquement si tout respectait les normes de production avant de l'envoyer en rendu.<br><br>
+                            <i class="fas fa-circle"></i> Le package est codé en python et il existait déjà mais dans maya j'ai donc repris une partie du code déjà existant (dont l'ui).
+                            Le launcher du package cherche si celui-ci a été lancé depuis maya ou nuke et en fonction de la réponse il va setup les adapteurs pour créer l'application 
+                            correspondante. Il renvoie ensuite à l'ui du sanity check et les informations utilisateurs sont renvoyées au core du code qui va appeler chaque check (qui sont
+                            des classes POO) pour le process.
+                        </p>
+                        <img class="projet-image" src="assets/img/screenshot_sanitychek.png">
+                    </div>
+                    <div class="projet-box">
+                        <h3 class="projet-title">Toolbox</h3>
+                        <p>
+                            <i class="fas fa-circle"></i> La Toolbox est une application conçue par les artistes dans nuke maya et houdini qui répertorie tous les scripts écrits par 
+                            les artistes pour chaque prod et chaque utilisateur et les exécute sur demande. Elle présente également une fonctionnalité pour créer un nouveau script 
+                            directement à partir de l'application et pour afficher le chemin du script ainsi que son contenu.<br><br>
+                            <i class="fas fa-circle"></i> Le package est toujours en cours d'écriture. Mon but est de réécrire le code écrit par les artistes, refaire l'architecture 
+                            et refaire l'ui afin de pouvoir intégrer proprement le package dans le pipe. Pour l'ui j'ai créé des widgets personnalisés héritant de ceux de Qt et le 
+                            reste du code a été clean après une architecture mvc. Le Launcher va demander depuis quel logiciel l'application a été lancée et appelle l'ui en fonction, 
+                            puis toutes les actions effectuées dans l'ui sont redirigées vers le main qui s'occupe d'appeler les processus correspondant à chaque action dans le core du code.
+                        </p>
+                        <img class="projet-image" src="assets/img/screenshot_toolbox.png">
+                    </div>
+                    <div class="projet-box">
+                        <h3 class="projet-title">Centraliseur de Menu</h3>
+                        <p>
+                            <i class="fas fa-circle"></i> Le créateur de Menu (vfxDccToolkit) est un package qui centralise tous les menus que nous avons créés sur diverses packages pour 
+                            chaque logiciel et qui les créé lui même. Il Permet de créer un menu à partir d'un simple fichier json et de le rajouter aux menus déjà existants.<br><br>
+                            <i class="fas fa-circle"></i> Le package est codé en python à l'aide d'abstract class en POO. Le launcher regroupe tous les menus trouvés (script json et 
+                            variables d'environnement) et appelle le créateur de menu adapté à chaque logiciel (nuke/maya/houdini) afin de les construire.
+                        </p>
+                        <img class="projet-image" src="assets/img/screenshot_vfxdcctoolkit.png">
+                    </div>
+                    <div class="projet-box">
+                        <h3 class="projet-title">Wrapper de Qt</h3>
+                        <p>
+                            <i class="fas fa-circle"></i> vfxMikGUI est un package que nous avons créé pour créer nos propres ui personnalisées pour l'entreprise plus facilement. Le wrapper 
+                            créé une application Qt personnalisée et propose des widgets propres au package qui sont tous des widgets qui héritent de ceux de Qt avec des personnalisations 
+                            spécifique à notre usage. Il suffit de rajouter un fichier dans le dossier "widgets" et de créer son propre widget et il devient utilisable partout dans le 
+                            contexte de l'entreprise.<br><br>
+                            <i class="fas fa-circle"></i> Le Package a été codé en python par un collègue mais je l'ai beaucoup utilisé lors de ces derniers mois que ce soit pour faire les 
+                            ui des packages sur lesquels je travaillais ou pour y rajouter des widgets. Pour l'exporteur de caméra par exemple j'ai ajouté un widget FrameRange. Celui-ci créé 
+                            une box avec 3 spinbox contenant les valeurs de la première frame, de la dernière frame et du step d'une animation.
+                        </p>
+                        <img class="projet-image" src="assets/img/screenshot_vfxmikgui.png">
+                    </div>
+                    <div class="projet-box">
+                        <h3 class="projet-title">Rez tools pour les devs</h3>
+                        <p>
+                            <i class="fas fa-circle"></i> Nous utilisons l'outil rez pour organiser notre environnement informatique et setuper nos productions et nos packages. Les plugins 
+                            rez permettent de créer de nouvelles commandes de rez pour nous aider dans notre travail. Chaque plugin est un simple fichier qui définit la commande et ce 
+                            qu'elle va faire.
+                            <i class="fas fa-circle"></i> J'ai créé en python les commandes rez de clean (pour clean un package en supprimant les fichiers inutiles), de check (pour vérifier 
+                            si un package respectait nos normes de codage), de format (pour reformater un package selon nos normes de codage), de clone (pour cloner un package depuis github/gitlab), 
+                            d'init (pour initaliser un package ou un plugin rez). Ci-dessous le rez format :
+                        </p>
+                        <img class="projet-image" src="assets/img/screenshot_vfxtd.png">
+                    </div>
+                </div>
             </div>
 
         </div>
