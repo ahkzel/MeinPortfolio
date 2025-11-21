@@ -380,3 +380,14 @@ nav hr{
 .toggle_sources .fa-chevron-down {
     cursor: pointer;
 }
+
+pre {
+    background: #f6f8fa;
+    padding: 10px;
+    border-radius: 6px;
+    overflow: auto;
+}
+
+code {
+    font-size: 0.95em;
+}
