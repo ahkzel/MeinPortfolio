@@ -68,19 +68,21 @@
                         TheNextWeb</a>, un site qui rassemble des informations sur les évolutions récentes de la tech dans le monde.<br>
                         <div class="toggle_sources">
                             <i class="fas fa-chevron-right toggle-button" id="toggle1" data-target="para1"></i>
-                            <p class="sources-detail" id="para1">
-                                L'article résume ce qu'est la programmation orientée objet, et pourquoi elle a été
-                                créée, mais pointe un problème récurent dans la POO aujourd'hui, celui-ci étant 
-                                que la POO était peut être devenue trop populaire. D'après Ari Joury, il n'est 
-                                pas rare que des développeurs créent leurs classes héritées de façons brouillonnes 
-                                et les fasses toutes communiquer entre elle, entrainant ainsi un code difficilement 
-                                réutilisable dans différents contextes via une mauvaise encapsulation et une 
-                                utilisation intensive de la POO dans des situations où ce n'est pas la solution 
-                                optimale.<br>La conclusion de cet article est qu'il est très important
-                                lorsque l'on programme en POO de créer une structure de travail claire et
-                                bien encapsulée afin d'avoir un code flexible qui ne demande pas une 
-                                maintenance lourde au moindre problème.
-                            </p>
+                            <div id="para1" class="sources-detail">
+                                <p>
+                                    L'article résume ce qu'est la programmation orientée objet, et pourquoi elle a été
+                                    créée, mais pointe un problème récurent dans la POO aujourd'hui, celui-ci étant 
+                                    que la POO était peut être devenue trop populaire. D'après Ari Joury, il n'est 
+                                    pas rare que des développeurs créent leurs classes héritées de façons brouillonnes 
+                                    et les fasses toutes communiquer entre elle, entrainant ainsi un code difficilement 
+                                    réutilisable dans différents contextes via une mauvaise encapsulation et une 
+                                    utilisation intensive de la POO dans des situations où ce n'est pas la solution 
+                                    optimale.<br>La conclusion de cet article est qu'il est très important
+                                    lorsque l'on programme en POO de créer une structure de travail claire et
+                                    bien encapsulée afin d'avoir un code flexible qui ne demande pas une 
+                                    maintenance lourde au moindre problème.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <br>
@@ -89,43 +91,45 @@
                         Pragmatic Objects</a> un article documentaire écrit sur gitbook.<br>
                         <div class="toggle_sources">
                             <i class="fas fa-chevron-right toggle-button" id="toggle2" data-target="para2"></i>
-                            <p class="sources-detail" id="para2">
-                                Cet article m'a été confié par mon tuteur d'alternance au tout début de mon alternance.
-                                On savait qu'on allait faire beaucoup de POO, alors en lui montrant mes premiers projets
-                                de code impliquant de la "POO" en python, il m'a fait différentes remarques concernant
-                                la façon dont mes instances et mes classes communiquaient entre elles, et m'a
-                                communiqué ce site afin que je comprenne mieux l'enjeu derrière la POO.<br>
-                                Ce site, comme à peu près tous ceux sur la POO, décrit ce qu'est la POO. Mais pas
-                                uniquement comme on l'apprend quand on découvre la POO pour la première fois. Ce n'est
-                                pas simplement question de classes, d'attributs, d'héritage, d'accès aux données, d'instances,
-                                etc. Selon ce site, un langage POO ne signifie pas un code POO. Ce n'est pas parce qu'on
-                                code en python avec des classes que notre code est POO, ce n'est pas parce qu'on code
-                                dans un langage procédural comme le C que notre code n'est pas en POO.<br>
-                                Selon l'auteur, si l'on veut structurer notre code en POO, il ne faut pas penser de façon
-                                technique comme on l'apprend usuellement de façon très pratique à l'école (classes, héritage, etc),
-                                mais il faut plutôt penser au design.<br>
-                                La philosophie principale d'Anthony (l'auteur) consiste à dire que les objets sont des "choses"
-                                pensantes et que le regard que l'on a sur nos intéractions influent souvent trop la façon que l'on
-                                a de définir ces choses. Selon lui, tout peut être un objet, une personne, un vêtement, un nombre,
-                                une date, mais aussi une opération, un ajout, une comparaison, un type de donnée, tout peut être une
-                                classe. Pourtant, dans notre esprit, on aurait du mal à créer une classe à partir de "supérieur à".<br>
-                                D'après Anthony, le principal aspect d'une classe est son encapsulation. Puisque ce sont des objets
-                                pensant, il faut garder en tête que ça n'aurait pas de sens de créer une instance d'une classe pour
-                                que toutes ses informations soient publiques. Le fait que le client puisse accéder à toutes les données
-                                et opérations d'un objet n'a pas de sens, et en ce sens là, les "getter" et "setter" sont anti POO.
-                                Parce qu'au final on définit des attributs privés pour les rendre publique. Lorsqu'on créé une classe,
-                                l'aspect technique nous fait souvent oublier la nature de la programmation objet. Et la façon la plus
-                                simple de le vérifier, combien de codes en "POO" respectent si peu la nature de la "POO" qu'ils pourraient
-                                tout autant être codés en procédural sans que cela ne change rien à l'architecture du code ?
-                                Les objets sont donc avant tout des entités, avec lesquelles on intéragit, mais comme on le ferait
-                                avec un humain, on ne vient pas chez quelqu'un pour lui changer son canapé et récupérer son adresse IP,
-                                pareillement les objets sont confidentiels, et lorsque l'utilisateur intéragit avec un objet, il doit
-                                savoir ce qu'il fait, mais il ne doit pas pouvoir changer librement tout et n'importe quoi dans l'objet.<br>
-                                Cet article m'a permis d'évoluer dans mon travail aux côtés de mes collègues qui me donnaient aussi des
-                                conseils au fur et à mesure pour créer des codes plus respectueux de la logique de la POO, avec toujours
-                                en tête cette question "est ce que la POO est réellement nécessaire dans le code que je viens d'écrire ?"
-                                si la réponse est non, c'est souvent que le code est mal écrit.
-                            </p>
+                            <div id="para2" class="sources-detail">
+                                <p>
+                                    Cet article m'a été confié par mon tuteur d'alternance au tout début de mon alternance.
+                                    On savait qu'on allait faire beaucoup de POO, alors en lui montrant mes premiers projets
+                                    de code impliquant de la "POO" en python, il m'a fait différentes remarques concernant
+                                    la façon dont mes instances et mes classes communiquaient entre elles, et m'a
+                                    communiqué ce site afin que je comprenne mieux l'enjeu derrière la POO.<br>
+                                    Ce site, comme à peu près tous ceux sur la POO, décrit ce qu'est la POO. Mais pas
+                                    uniquement comme on l'apprend quand on découvre la POO pour la première fois. Ce n'est
+                                    pas simplement question de classes, d'attributs, d'héritage, d'accès aux données, d'instances,
+                                    etc. Selon ce site, un langage POO ne signifie pas un code POO. Ce n'est pas parce qu'on
+                                    code en python avec des classes que notre code est POO, ce n'est pas parce qu'on code
+                                    dans un langage procédural comme le C que notre code n'est pas en POO.<br>
+                                    Selon l'auteur, si l'on veut structurer notre code en POO, il ne faut pas penser de façon
+                                    technique comme on l'apprend usuellement de façon très pratique à l'école (classes, héritage, etc),
+                                    mais il faut plutôt penser au design.<br>
+                                    La philosophie principale d'Anthony (l'auteur) consiste à dire que les objets sont des "choses"
+                                    pensantes et que le regard que l'on a sur nos intéractions influent souvent trop la façon que l'on
+                                    a de définir ces choses. Selon lui, tout peut être un objet, une personne, un vêtement, un nombre,
+                                    une date, mais aussi une opération, un ajout, une comparaison, un type de donnée, tout peut être une
+                                    classe. Pourtant, dans notre esprit, on aurait du mal à créer une classe à partir de "supérieur à".<br>
+                                    D'après Anthony, le principal aspect d'une classe est son encapsulation. Puisque ce sont des objets
+                                    pensant, il faut garder en tête que ça n'aurait pas de sens de créer une instance d'une classe pour
+                                    que toutes ses informations soient publiques. Le fait que le client puisse accéder à toutes les données
+                                    et opérations d'un objet n'a pas de sens, et en ce sens là, les "getter" et "setter" sont anti POO.
+                                    Parce qu'au final on définit des attributs privés pour les rendre publique. Lorsqu'on créé une classe,
+                                    l'aspect technique nous fait souvent oublier la nature de la programmation objet. Et la façon la plus
+                                    simple de le vérifier, combien de codes en "POO" respectent si peu la nature de la "POO" qu'ils pourraient
+                                    tout autant être codés en procédural sans que cela ne change rien à l'architecture du code ?
+                                    Les objets sont donc avant tout des entités, avec lesquelles on intéragit, mais comme on le ferait
+                                    avec un humain, on ne vient pas chez quelqu'un pour lui changer son canapé et récupérer son adresse IP,
+                                    pareillement les objets sont confidentiels, et lorsque l'utilisateur intéragit avec un objet, il doit
+                                    savoir ce qu'il fait, mais il ne doit pas pouvoir changer librement tout et n'importe quoi dans l'objet.<br>
+                                    Cet article m'a permis d'évoluer dans mon travail aux côtés de mes collègues qui me donnaient aussi des
+                                    conseils au fur et à mesure pour créer des codes plus respectueux de la logique de la POO, avec toujours
+                                    en tête cette question "est ce que la POO est réellement nécessaire dans le code que je viens d'écrire ?"
+                                    si la réponse est non, c'est souvent que le code est mal écrit.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <br>
@@ -135,67 +139,69 @@
                         Developpez</a>
                         <div class="toggle_sources">
                             <i class="fas fa-chevron-right toggle-button" id="toggle3" data-target="para3"></i>
-                            <p class="sources-detail" id="para3">
-                                Cet article est un article qui tente de recréer une POO, mais dans un langage qui ne comporte pas de principe POO
-                                tel le C (pas de classe, d'héritage, etc). Le But est de démontrer qu'il est possible de construire un code avec
-                                une logique POO tout cela sans classes. <br>
-                                L'auteur utilise les srtuctures en C en guise de classe et des fonctions à la place des méthodes. Les données membre
-                                des structures sont inaccessibles autrement que par les fonctions, et c'est une fonction qui va instancier une structure
-                                avec ses données membres (pareillement à un constructeur). Contrairement aux langages en POO, le pointeur this est ici
-                                passé comme premier paramètre de chaque fonction, voici un bout de code :
-                                <pre><code class="code">
-// Structure
-typedef struct TPile
-    {
-            int(*Push)(struct TPile*, int);
-            int(*Pop)(struct TPile*);
-            void(*Clear)(struct TPile*);
-            void(*Free)(struct TPile*);
-            int(*Length)(struct TPile*);
-            void(*View)(struct TPile*);
+                            <div id="para3" class="sources-detail">
+                                <p>
+                                    Cet article est un article qui tente de recréer une POO, mais dans un langage qui ne comporte pas de principe POO
+                                    tel le C (pas de classe, d'héritage, etc). Le But est de démontrer qu'il est possible de construire un code avec
+                                    une logique POO tout cela sans classes.<br>
+                                    L'auteur utilise les srtuctures en C en guise de classe et des fonctions à la place des méthodes. Les données membre
+                                    des structures sont inaccessibles autrement que par les fonctions, et c'est une fonction qui va instancier une structure
+                                    avec ses données membres (pareillement à un constructeur). Contrairement aux langages en POO, le pointeur this est ici
+                                    passé comme premier paramètre de chaque fonction, voici un bout de code :
+                                    <pre><code class="code">
+                                    // Structure
+                                    typedef struct TPile
+                                        {
+                                                int(*Push)(struct TPile*, int);
+                                                int(*Pop)(struct TPile*);
+                                                void(*Clear)(struct TPile*);
+                                                void(*Free)(struct TPile*);
+                                                int(*Length)(struct TPile*);
+                                                void(*View)(struct TPile*);
 
-            int Nombre;
-            struct Titem *Top;
-    } TPile ;
-// Constructeur
-TPile* New_TPile()
-    {
-           TPile *This = malloc(sizeof(TPile));
-           if(!This) return NULL;
-           TPile_Init(This);
-           This->Free = TPile_New_Free;
-           return This;
-    }
-static void TPile_Init(TPile *This)
-    {
-           This->Push = TPile_Push;
-           This->Pop = TPile_Pop;
-           This->Clear = TPile_Clear;
-           This->Length = TPile_Length;
-           This->View = TPile_View;
-           This->Nombre = 0;
-           This->Top = NULL;       
-    }
-// Fonction
-int TPile_Push(TPile *This, int Val)
-    {
-            Titem *new_item = malloc(sizeof(Titem));
-            if(!new_item) return ITEM_ALLOC_ERROR;
-            new_item->Value = Val;
-            new_item->prec = This->Top;
-            This->Top = new_item;
-            This->Nombre++;
-            return 0;
-    }
-// Destructeur
-void TPile_New_Free(TPile *This)
-    {
-            if(This) TPile_Clear(This);
-            free(This);        
-            puts("Destruction de la pile dynamique.\n");
-    }
-                                </code></pre>
-                            </p>
+                                                int Nombre;
+                                                struct Titem *Top;
+                                        } TPile ;
+                                    // Constructeur
+                                    TPile* New_TPile()
+                                        {
+                                            TPile *This = malloc(sizeof(TPile));
+                                            if(!This) return NULL;
+                                            TPile_Init(This);
+                                            This->Free = TPile_New_Free;
+                                            return This;
+                                        }
+                                    static void TPile_Init(TPile *This)
+                                        {
+                                            This->Push = TPile_Push;
+                                            This->Pop = TPile_Pop;
+                                            This->Clear = TPile_Clear;
+                                            This->Length = TPile_Length;
+                                            This->View = TPile_View;
+                                            This->Nombre = 0;
+                                            This->Top = NULL;       
+                                        }
+                                    // Fonction
+                                    int TPile_Push(TPile *This, int Val)
+                                        {
+                                                Titem *new_item = malloc(sizeof(Titem));
+                                                if(!new_item) return ITEM_ALLOC_ERROR;
+                                                new_item->Value = Val;
+                                                new_item->prec = This->Top;
+                                                This->Top = new_item;
+                                                This->Nombre++;
+                                                return 0;
+                                        }
+                                    // Destructeur
+                                    void TPile_New_Free(TPile *This)
+                                        {
+                                                if(This) TPile_Clear(This);
+                                                free(This);        
+                                                puts("Destruction de la pile dynamique.\n");
+                                        }
+                                    </code></pre>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
